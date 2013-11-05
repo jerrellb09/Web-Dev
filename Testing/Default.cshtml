@@ -1,0 +1,78 @@
+﻿@{  
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Welcome to my Web Site!";
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js">
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#hide").click(function () {
+            $("img").hide();
+
+        });
+   
+    $("#show").click(function () {
+        $("img").show();
+    });
+ 
+
+    $("#fade").click(function () {
+        $("img").fadeToggle();
+    });
+
+    $("#toggle").click(function () {
+        $("img").slideToggle("slow");
+    });
+
+    $("#enlarge").click(function () {
+        $("h3").animate({ left:'250px', height: '+=150px',  });
+    });
+    
+
+    $("#animate").click(function () {
+        $("div").toggle({ left: '300px' })
+
+        $("#unanimate").click(function () {
+            $("html").toggle()
+        });
+        });
+    });
+ </script>
+
+
+<script >
+
+    
+    function changeImage() {
+        element = document.getElementById('myimage')
+        if (element.src.match("org")) {
+            element.src = "http://www.military-today.com/aircraft/f22_raptor_l8.jpg";
+        }
+        else {
+            element.src = "http://cdn.globalaircraft.org/media/img/planes/lowres/f-23-6.jpg";
+        }
+    }
+</script>
+
+<h3 id="enlarge" style="float:right; text-transform:capitalize" >Click on meeee</h3>
+    <div style="background:#b6ff00;height:700px;width:525px;position:fixed"> 
+        <img id="myimage" onclick="changeImage()"
+            src="http://cdn.globalaircraft.org/media/img/planes/lowres/f-23-6.jpg" width="600" height="400" style="padding:5px 5px 5px 5px">
+    </div>
+<button id="hide" style="float:right">Hide</button>
+<button id="show" style="float:right">Show</button>
+<button id="fade" style="float:right">Fade In/Out</button>
+<button id="animate" style="float:right">Animate</button>
+<button id="toggle" style="float:right">Toggle</button>
+
+
+
+<p>
+    ASP.NET Web Pages make it easy to build powerful .NET based applications for the web.
+
+ 
+   
+</p>
+
+   
