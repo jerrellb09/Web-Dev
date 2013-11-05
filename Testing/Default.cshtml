@@ -25,13 +25,17 @@
         $("img").slideToggle("slow");
     });
 
+    $("button").click(function () {
+        $("img").css("color", "red").slideUp(2000).slideDown(2000);
+    });
+
     $("#enlarge").click(function () {
         $("h3").animate({ left:'250px', height: '+=150px',  });
     });
     
 
     $("#animate").click(function () {
-        $("div").toggle({ left: '300px' })
+        $("div").toggle(1000).toggle(2000);
 
         $("#unanimate").click(function () {
             $("html").toggle()
@@ -64,6 +68,7 @@
 <button id="show" style="float:right">Show</button>
 <button id="fade" style="float:right">Fade In/Out</button>
 <button id="animate" style="float:right">Animate</button>
+<button id="button" style="float:right">Click Me</button>
 <button id="toggle" style="float:right">Toggle</button>
 
 
