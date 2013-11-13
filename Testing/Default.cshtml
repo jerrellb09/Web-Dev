@@ -12,8 +12,9 @@
             $("img").hide({});
 
         });
+    });
 
-        $(document).ready(function () {
+        $(document).ready(function runIt(){
             //var div1 = $("#div1")
             //div1().hide().fadeIn(2000).animate({left:'250px'}).slideDown();
             //div1.animate({ height: '300px', opacity: '0.4' }, "slow");
@@ -22,27 +23,22 @@
             //div1.animate({ width: '100px', opacity: '0.8' }, "slow");
             //div1.animate({ height: '700px', width: '525px' }, "slow");
             //div1.animate();
-                
 
-            var div2 = $("#div2").hide().fadeIn(2000).slideDown();
+
+            var div2 = $("#div2").hide().fadeIn(2000);//.slideDown();
             div2.animate({ left: '100px' }, "slow");
             div2.animate({ fontSize: '3em' }, "slow");
             div2.animate({ fontSize: '1em' }, "slow");
 
-            var div3 = $("#div3").hide().fadeIn(2000)
-            div3.animate({ left: '800px' }, 4000);
-
-            var div4 = $("#div4").hide().fadeIn(2000)
-            div3.animate({ left: '800px' }, 4000);
-
-            var div5 = $("#div5").hide().fadeIn(2000)
-            div3.animate({ left: '800px' }, 4000);
-
-            var div6 = $("#div3").hide().fadeIn(2000)
-            div3.animate({ left: '800px' }, 4000);
+            var div3 = $("#div3").hide().fadeIn(2000).animate({ left: 800 }, 3000).animate({ left: -400 }, 4000);
 
 
+            var div4 = $("#div4").hide().fadeIn(3000).animate({ left: '250px' }, 2850).animate({ left: '800px' }, 2000);
 
+            var div5 = $("#div5").hide().fadeIn(4000).animate({ left: '-800px' }, 2450).animate({ left: '800px' }, 2000);
+
+
+            var div6 = $("#div6").hide().fadeIn(5000).animate({ left: '800px' }, 2500).animate({ left: '-800px' }, 2000);
 
         });
    
@@ -75,9 +71,9 @@
         $("img").toggle(1000).toggle(2000);
 
     });
-              
-        });
-
+    runIt();
+        
+   
  </script>
 
 
@@ -97,8 +93,8 @@
 
 <h5 id="enlarge"   style="float:right; text-transform:capitalize" >Click on meeee</h5>
     <div id="div1" @*class="appear"*@ style="background:#b6ff00;height:700px;width:525px; position:relative"> 
-        @*<img id="myimage" onclick="changeImage()"
-            src="http://cdn.globalaircraft.org/media/img/planes/lowres/f-23-6.jpg" width="600" height="400" style="padding:5px 5px 5px 5px">*@
+        <img id="myimage" onclick="changeImage()"
+            src="http://cdn.globalaircraft.org/media/img/planes/lowres/f-23-6.jpg" width="600" height="400" style="padding:5px 5px 5px 5px">
         <button id="hide" style="float:right">Hide</button>
 <button id="show" style="float:right">Show</button>
 <button id="fade" style="float:right">Fade In/Out</button>
@@ -123,20 +119,18 @@
     <div id="div2" class="appear" style="/*animation:ease-in;*/ width:450px; height:338px; background-color:aqua;"  >
         <span id="demo"> What kind of cool planes would you like to see today?</span>
 
-    </div>
+   </div>
 
     <br />
-    <br />
+     <br />
 
-    <div id="div3" style=" background-color:magenta; width:250px; height:250px; position:relative;"></div>
+     <div id="div3" style=" background-color:magenta; width:250px; height:250px; position:relative;"></div>
     
     <div id="div4" style=" background-color:orange; width:250px; height:250px; position:relative;"></div>
     
     <div id="div5" style=" background-color:cyan; width:250px; height:250px; position:relative;"></div>
     
     <div id="div6" style=" background-color:forestgreen; width:250px; height:250px; position:relative;"></div>
-   
-    
 
 </div>
    
